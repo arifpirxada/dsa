@@ -1,0 +1,18 @@
+-> Analysis criteria for sorting algorithms - Criterias to analyze "Sorting Algorithms"
+
+Some commonly used criterias to analyze "Sorting Algorithms":
+
+1. Time Complexity.
+
+2. Space Complexity.
+
+3. Stability: If there are two equal numbers in a Data Structure, 
+the first of the two equal numbers should come first after the sorting is done.
+If an algo follows this then the algo is stable.
+
+4. Internal Sorting Algorithm: All data is loaded into the memory.
+    External Sorting Algorithm: All data is not loaded into the memory, it reads data.
+
+5. Adaptive: Already sorted data takes less time.
+
+6. Recursive: Algorithm which uses recursion.
