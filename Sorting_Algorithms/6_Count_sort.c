@@ -11,7 +11,7 @@ int main()
     countSort(arr, 10);
 
     printArray(arr, 10);
-printf("this is it");
+
     return 0;
 }
 
