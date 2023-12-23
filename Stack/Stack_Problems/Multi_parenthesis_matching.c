@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Leetcode: https://leetcode.com/problems/valid-parentheses/
+
 // Problem: Check if the parenthesis in an expression are matching
 // * Expression also contains curly braces and brackets.
 // Example: {(2 + 4) * [2(9 + 8)]} - Parentheses are matching
@@ -17,7 +19,7 @@ int multiParenthesisMatch(char expression[]);
 
 int main()
 {
-    char exp[] = "{(2 + 4) * [2(9 + 8)]}";
+    char exp[] = "([)]";
 
     if (multiParenthesisMatch(exp))
     {
@@ -33,15 +35,15 @@ int main()
 
 int match(char a, char b)
 {
-    if (a == '(' || b == ')')
+    if (a == '(' && b == ')')
     {
         return 1;
     }
-    if (a == '[' || b == ']')
+    if (a == '[' && b == ']')
     {
         return 1;
     }
-    if (a == '{' || b == '}')
+    if (a == '{' && b == '}')
     {
         return 1;
     }
