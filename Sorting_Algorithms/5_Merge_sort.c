@@ -5,7 +5,7 @@
 // Sorts an array whose two parts are "sorted" seperated by an index "mid" through merging
 void merge(int arr[], int low, int mid, int high)
 {
-    int i = low, j = mid + 1, k = low;
+    int i = low, j = mid + 1, k = 0;
     int *tempArr = (int *)malloc((high - low + 1) * sizeof(int));
 
     while (i <= mid && j <= high)
@@ -37,9 +37,9 @@ void merge(int arr[], int low, int mid, int high)
         k++;
     }
 
-    for (i = low; i <= high; i++)
+    for (i = low, k = 0; i <= high; i++, k++)
     {
-        arr[i] = tempArr[i];
+        arr[i] = tempArr[k];
     }
     free(tempArr);
 }

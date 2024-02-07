@@ -1,0 +1,7 @@
+A function calling itself - Recursion.
+
+Three main parts:
+
+1. Base case: Portion which stops recursion, it is at the top of function.
+2. Small calculation: calculations which are done with what the recursion returns.
+3. Recursion call: Where recursion is called.

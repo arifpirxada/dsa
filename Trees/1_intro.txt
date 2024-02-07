@@ -1,0 +1,106 @@
+Contents:                                        Tree
+1. Terminologies.                                 5
+2. Binary Tree.                                 / | \   
+3. Binary Tree Types.                          4  9  2
+4. Representation of Binary Tree.             / \     \
+5. Traversal of Binary Tree.                 7   1     3
+6. Binary Search Tree.
+
+- Tree is made up of nodes and edges(arrows).
+- n nodes => n - 1 edges.
+- Degree of node => No. of direct children of a node.
+- Degree of tree => Highest degree of a node among all the nodes in the tree.
+
+"Terminologies:"
+
+1. Root: Topmost node.
+2. Parent: Node which connects to other nodes below it.
+3. Child: Which is connected by other parent node.
+4. Sibling: Nodes belonging to same parent.
+5. Leaf/External node: Nodes with no children.
+6. Internal node: Nodes with at least one child.
+7. Depth: No. of edges from root to the node.
+8. Height: No. of edges from node to the deepest leaf.
+9. Ancestors: All parents / grandparents of a node.
+10. Descendants: All children of a node.
+
+"Binary tree:" It is a type of tree in which every node has two or less than two children,
+if any node has more than two children than it is not a binary tree.
+
+Binary tree => Tree of degree 2.
+
+"Types of Binary Trees:"
+
+       Full BT         Perfect BT          Complete BT          
+          5               5                    5    
+        /   \          /    \               /    \         
+       3     9        3      9             3      9    
+     /   \          /  \    /  \         /  \    /
+    1     4        1    4  6    4       1    4  6   
+
+1. Full or strict Binary Tree:
+    - All nodes have either 0 or 2 children.    
+
+2. Perfect Binary Tree:
+    - All Internal nodes have two children + All Leaf nodes are on the same level.
+
+3. Complete Binary Tree:
+    - All levels are completely filled except possibly the last level + last
+    level must have it's keys as left as possible.
+
+4. Degenerate Binary Tree:
+    - Every parent node has exactly one child.
+        Degenerate BT   Left Skewed    Right Skewed BT                
+           5                 5                  5         
+          /                 /                    \               
+         3                 3                      3   
+          \               /                        \    
+           4             4                          4     
+
+    Two types of Degenerate Binary Trees:
+    (i) Left Skewed Binary Tree: All the children are towards the left.
+    (i) Right Skewed Binary Tree: All the children are towards the right.
+
+
+"Representation of a Binary Tree:"
+
+1. Array Representation: In this we store the element in tree from left to right
+according to index in nodes. see "./Representation_images/array_representation.png"
+
+2. Linked Representation: In this we store nodes having data and two pointers 
+- one to left child node and another to right child node.(i,e doubly linked list node)
+see "./Representation_images/linked_representation.png"
+
+Note: it is Linked Representation not Linked List Representation.
+
+"Traversal in a Binary Tree:"
+- We Three ways to traverse Binary Tree
+
+1. Preorder: First traverse root, then left subtree and then right subtree.
+"<root><left subtree><right subtree>"
+
+2. Postorder: First traverse left subtree, then right subtree and then root.
+"<left subtree><right subtree><root>"
+
+3. Inorder: First traverse left subtree, then root and then right subtree.
+"<left subtree><root><right subtree>"
+
+"Binary Search Tree:"
+                      BST
+                       5
+                     /   \   
+                    3     9
+                  /   \
+                 1     4     
+ 
+- It is a type of Binary Tree with following properties:
+
+1. All nodes of the left subtree are lesser.
+2. All nodes of the right subtree are greater.
+3. Left and right subtrees are also BST.
+4. There are no dublicates nodes.
+
+Checking if a tree is a Binary Search Tree.
+- Inorder traversal of BST is gives an ascending array.
+
+
