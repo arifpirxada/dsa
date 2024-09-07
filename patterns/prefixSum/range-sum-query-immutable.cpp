@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/range-sum-query-immutable/
 
 
-
+// Previous solution c++ code
 
 typedef struct {
     int *nums;
@@ -36,3 +36,21 @@ void numArrayFree(NumArray* obj) {
  
  * numArrayFree(obj);
 */
+
+// New using prefix sum:
+
+class NumArray {
+private:
+    vector<int> prefix;
+public:
+    NumArray(vector<int>& nums) {
+        prefix.push_back(nums[0]);
+        for (int i = 1; i < nums.size(); i++) {
+            prefix.push_back(prefix.back() + nums[i]);
+        }
+    }
+    
+    int sumRange(int left, int right) {
+        return left > 0 ? (prefix[right] - prefix[left - 1]) : prefix[right];
+    }
+};
