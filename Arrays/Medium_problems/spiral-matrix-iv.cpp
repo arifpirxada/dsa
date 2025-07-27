@@ -45,3 +45,46 @@ public:
         return matrix;
     }
 };
+
+
+// second solve
+class Solution {
+public:
+    vector<vector<int>> spiralMatrix(int m, int n, ListNode* head) {
+        vector<vector<int>> matrix(m, vector<int>(n, -1));
+        ListNode* ptr = head;
+        int left = 0, right = n - 1, top = 0, bottom = m - 1;
+
+        while (left <= right && top <= bottom) {
+            for (int i = left; i <= right; i++) {
+                if (ptr) {
+                    matrix[top][i] = ptr->val;
+                    ptr = ptr->next;
+                }
+            }
+            top++;
+            for (int i = top; i <= bottom; i++) {
+                if (ptr) {
+                    matrix[i][right] = ptr->val;
+                    ptr = ptr->next;
+                }
+            }
+            right--;
+            for (int i = right; i >= left; i--) {
+                if (ptr) {
+                    matrix[bottom][i] = ptr->val;
+                    ptr = ptr->next;
+                }
+            }
+            bottom--;
+            for (int i = bottom; i >= top; i--) {
+                if (ptr) {
+                    matrix[i][left] = ptr->val;
+                    ptr = ptr->next;
+                }
+            }
+            left++;
+        }
+        return matrix;
+    }
+};

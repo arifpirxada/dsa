@@ -12,6 +12,7 @@
         Example: Convert 7 to its Binary form.
         * 7 / 2 = 3; 7 % 2 = 1 (reminder)
         * 3 / 2 = 1 (first of binary number); 3 % 2 = 1
+        * 1 / 2 = 0; 1 % 2 = 1
 
         Binary number = 111
     - Example: Convert 13 to its Binary form.
@@ -19,6 +20,7 @@
         * 13 / 2 = 6; 13 % 2 = 1 (reminder)
         * 6 / 2 = 3; 6 % 2 = 0
         * 3 / 2 = 1; 3 % 2 = 1
+        * 1 / 2 = 0; 1 % 2 = 1
 
         Binary number = 1101
     ```
