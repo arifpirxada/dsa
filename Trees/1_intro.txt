@@ -98,7 +98,7 @@ Note: it is Linked Representation not Linked List Representation.
 1. All nodes of the left subtree are lesser.
 2. All nodes of the right subtree are greater.
 3. Left and right subtrees are also BST.
-4. There are no dublicates nodes.
+4. There are no dublicate nodes.
 
 Checking if a tree is a Binary Search Tree.
 - Inorder traversal of BST is gives an ascending array.
