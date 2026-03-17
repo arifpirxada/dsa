@@ -1,0 +1,57 @@
+#include <iostream>
+#include <vector>   
+
+using namespace std;
+
+class Sort {
+    public:
+        void printArr(vector<int>& arr) {
+            for (int i = 0; i < arr.size(); i++) {
+                cout << arr[i] << " ";
+            }
+        }
+        void merge(vector<int>& arr, int left, int mid, int right) {
+            vector<int> temp;
+            
+            int i = left;
+            int j = mid + 1;
+
+            while (i <= mid && j <= right) {
+                if (arr[i] <= arr[j]) {
+                    temp.push_back(arr[i++]);
+                } else {
+                    temp.push_back(arr[j++]);
+                }
+            }
+
+            while (i <= mid) temp.push_back(arr[i++]);
+            while (j <= right) temp.push_back(arr[j++]);
+
+            for (int k = left; k <= right; k++) {
+                arr[k] = temp[k - left];
+            }
+        }
+
+        void mergeSort(vector<int>& arr, int left, int right) {
+            if (left >= right) return;
+
+            int mid = left + (right - left) / 2;
+
+            mergeSort(arr, left, mid);
+            mergeSort(arr, mid + 1, right);
+
+            merge(arr, left, mid, right);
+        }
+};
+
+int main() {
+    vector<int> myArr = {3, 4, 2, 1, 8, 6, 7, 5};
+
+    Sort s;
+
+    s.mergeSort(myArr, 0, myArr.size() - 1);
+
+    s.printArr(myArr);
+
+    return 0;
+}
