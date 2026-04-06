@@ -1,0 +1,32 @@
+### Intro
+
+Dynamic Programming (DP) is a technique used to solve problems by breaking them into smaller 
+overlapping subproblems, solving each subproblem once, and storing the results to avoid recomputation.
+
+##### Key Concepts:
+
+1. Overlapping Subproblems
+    - Same subproblems get solved multiple times in recursion
+    - Example: Fibonacci
+
+2. Optimal Substructure
+    - The optimal answer can be built from optimal solutions of smaller subproblems
+    - Example: shortest path, knapsack
+
+
+Core Idea:
+DP = State + Transition
+
+State: A state represents a subproblem.
+    - What information do I need to uniquely define this subproblem?
+    
+Transition: A transition defines how you move from smaller subproblems to the current one.
+    - How do I compute this state from previous states?
+
+##### Approaches:
+
+1. Memoization (Top-Down): Recursion + cache
+
+2. Tabulation (Bottom-Up): Iterative table filling
+
+3. Space Optimization: Reduce memory when only previous states are needed
