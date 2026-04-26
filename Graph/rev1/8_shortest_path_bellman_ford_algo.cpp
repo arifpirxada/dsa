@@ -15,13 +15,10 @@ public:
     }
 };
 
-// Bellman Ford: Works with Directed Graphs Only, 
-// can work with undirected (but you need to convert it into directed, but it should not have negative edge - -ve Cycle)
-
 vector<int> shortest_path(vector<vector<Edge>>& g, int V, int src) {
     vector<int> dist(V, INT_MAX);
     dist[src] = 0;
-
+    
     for (int i = 0; i < V - 1; i++) {
         for (int u = 0; u < V; u++) {
             for (Edge e : g[u]) {
